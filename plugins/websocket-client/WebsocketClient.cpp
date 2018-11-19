@@ -1,5 +1,5 @@
 #include <obs-module.h>
-#include <openssl/opensslv.h>
+#include <openssl/ssl.h>
 #include "JanusWebsocketClientImpl.h"
 #include "SpankChainWebsocketClientImpl.h"
 #include "MillicastWebsocketClientImpl.h"
@@ -8,7 +8,7 @@ OBS_DECLARE_MODULE()
 
 bool obs_module_load(void)
 {
-  OPENSSL_init_ssl(0, NULL);
+  //OPENSSL_init_ssl(0, NULL);
   return true;
 }
 
